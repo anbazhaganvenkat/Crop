@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context=".CropScreen">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/login_toolbar"
+        style="@style/Toolbar"
+        android:background="#000000">
+        <ImageView
+            android:id="@+id/navigation_icon"
+            style="@style/Back_Arrow"
+            android:src="@drawable/back_arrow"
+            android:tint="#ffffff"/>
+        <View style="@style/ViewHSpace3"/>
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crop"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/next"
+                style="@style/Next_Button"
+                android:text="Next"
+                android:textSize="16dp"
+                android:textColor="#ffffff"/>
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/login_toolbar">
+
+        <com.example.crop.crop.imagecrop.view.ImageCropView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/my_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/rotateImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/rotate_icon"
+                    android:tint="#ffffff"/>
+
+                <View
+                    android:id="@+id/space"
+                    style="@style/ViewVSpace3"
+                    android:layout_below="@+id/library_image" />
+            </RelativeLayout>
+            <View
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/aspect_ratio"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/ratio_icon" />
+
+                <View
+                    android:id="@+id/space1"
+                    style="@style/ViewVSpace3"
+                    android:layout_below="@+id/camera_image" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
